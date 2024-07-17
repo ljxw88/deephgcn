@@ -1,5 +1,5 @@
 # DeepHGCN
-This repo is the official implementation of paper DeepHGCN: Toward Deeper Hyperbolic Graph Convolutional Networks.
+This repository contains a PyTorch implementation of "DeepHGCN: Toward Deeper Hyperbolic Graph Convolutional Networks".
 
 ### Directories
 - `deephgcn`: code implementation for the proposed DeepHGCN model.
