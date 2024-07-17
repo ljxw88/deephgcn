@@ -1,4 +1,5 @@
-## DeepHGCN: Toward Deeper Hyperbolic Graph Convolutional Networks
+# DeepHGCN
+This repo is the official implementation of paper DeepHGCN: Toward Deeper Hyperbolic Graph Convolutional Networks.
 
 ### Directories
 - `deephgcn`: code implementation for the proposed DeepHGCN model.
@@ -7,8 +8,18 @@
 - `notes`: miscellaneous visualizations and toy evaluations.
 
 ### Requirement
-- geoopt
+- geoopt ```(pip install geoopt)```
 - networkx
 - scikit-learn
 
-### Reference
+### Reference code
+
+- geoopt: https://github.com/geoopt/geoopt
+- HNN++: https://github.com/mil-tokyo/hyperbolic_nn_plusplus
+- HGCN: https://github.com/HazyResearch/hgcn
+- GCNII: https://github.com/chennnM/GCNII
+- Fréchet Mean: https://github.com/CUAI/Differentiable-Frechet-Mean
+
+### Citation
+```
+```
