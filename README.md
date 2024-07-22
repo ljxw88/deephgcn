@@ -22,4 +22,13 @@ This repository contains a PyTorch implementation of "DeepHGCN: Toward Deeper Hy
 
 ### Citation
 ```
+@misc{liu2024deephgcndeeperhyperbolicgraph,
+      title={DeepHGCN: Toward Deeper Hyperbolic Graph Convolutional Networks}, 
+      author={Jiaxu Liu and Xinping Yi and Xiaowei Huang},
+      year={2024},
+      eprint={2310.02027},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2310.02027}, 
+}
 ```
