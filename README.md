@@ -22,14 +22,11 @@ This repository contains a PyTorch implementation of "DeepHGCN: Toward Deeper Hy
 
 ### Citation
 ```
-@ARTICLE{10632071,
+@article{liu2024deephgcn,
+  title={DeepHGCN: Toward Deeper Hyperbolic Graph Convolutional Networks},
   author={Liu, Jiaxu and Yi, Xinping and Huang, Xiaowei},
-  journal={IEEE Transactions on Artificial Intelligence}, 
-  title={DeepHGCN: Toward Deeper Hyperbolic Graph Convolutional Networks}, 
+  journal={IEEE Transactions on Artificial Intelligence},
   year={2024},
-  volume={},
-  number={},
-  pages={1-14},
-  keywords={Graph neural networks;Riemannian manifold;hyperbolic operations;deep model architecture},
-  doi={10.1109/TAI.2024.3440223}}
+  publisher={IEEE}
+}
 ```
