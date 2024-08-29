@@ -32,7 +32,7 @@ class HyperbolicLinearFast(nn.Module):
         return x
 
 class HyperbolicGraphConvolution(nn.Module):
-    def __init__(self, manifold, in_features, out_features, dropout, layer_num, act_fn=None, final=False, params=[]):
+    def __init__(self, manifold, in_features, out_features, dropout, layer_num, act_fn=None, final=False, final_agg=False, params=[]):
         super(HyperbolicGraphConvolution, self).__init__() 
 
         self.use_bias = True
@@ -51,7 +51,7 @@ class HyperbolicGraphConvolution(nn.Module):
         self.alpha = params[0]
         self.beta = params[1]
 
-        self.final_agg = False
+        self.final_agg = final_agg
 
     def forward(self, input, adj, h_init):
         theta = math.log(self.beta/self.layer_num + 1)
@@ -83,7 +83,7 @@ class HyperbolicGraphConvolution(nn.Module):
         return support
 
 class HGCN(nn.Module):
-    def __init__(self, nfeat, nlayers, nhidden, nclass, dropout, act_fn, c, params):
+    def __init__(self, nfeat, nlayers, nhidden, nclass, dropout, final_agg, act_fn, c, params):
         super(HGCN, self).__init__()
         self.c = c
         self.manifold = PoincareBall(c=self.c)
@@ -98,7 +98,7 @@ class HGCN(nn.Module):
             if ln == self.nlayers - 1:
                 final_layer = True
             self.convs.append(HyperbolicGraphConvolution(self.manifold, nhidden, nhidden, dropout, \
-                                                         layer_num=ln+1, act_fn=act_fn, final=final_layer, params=params))
+                                                         layer_num=ln+1, act_fn=act_fn, final=final_layer, final_agg=final_agg, params=params))
         
         self.params_convs = list(self.convs.parameters())
         self.params_fcs = list(self.fcs.parameters())

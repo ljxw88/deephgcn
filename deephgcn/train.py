@@ -28,6 +28,7 @@ parser.add_argument('--data', default='cora', help='dataset')
 parser.add_argument('--dev', type=int, default=0, help='device id')
 parser.add_argument('--gamma', type=int, default=0., help='gamma of lr scheduler')
 parser.add_argument('--test', action='store_true', default=False, help='evaluation on test set.')
+parser.add_argument('--final_agg', action='store_true', default=False, help='final weight alignment.')
 parser.add_argument('--margin', type=float, default=2., help='margin of margin loss.')
 parser.add_argument('--grad-clip', type=float, default=None, help='clip gradient.')
 parser.add_argument('--lr-reduce-freq', type=float, default=None, help='reduce lr frequency')
@@ -85,6 +86,7 @@ model = HGCN(nfeat = args.feat_dim,
                 nhidden = args.hidden,
                 nclass = int(labels.max()) + 1,
                 dropout = args.dropout,
+                final_agg = args.final_agg,
                 act_fn = act_fn,
                 c = args.c,
                 params = [args.alpha, args.beta]).to(device)

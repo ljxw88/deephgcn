@@ -9,14 +9,15 @@ opt = dict()
 opt['data'] = 'citeseer'
 opt['layer'] = 8
 opt['hidden'] = 64
-opt['dropout'] = 0.3
+opt['dropout'] = 0.1
 opt['act'] = 'lrelu'
 opt['wd-fc'] = 5e-4
 opt['wd-conv'] = 1e-2
 opt['lr'] = 1e-2
 opt['dev'] = 0
 opt['test'] = ""
-opt['print-epochs'] = 0
+opt['final_agg'] = ""
+opt['print-epochs'] = 1
 opt['optim'] = 'Adam'
 opt['c'] = 2
 
