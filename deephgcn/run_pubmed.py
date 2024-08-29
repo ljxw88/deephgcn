@@ -12,13 +12,14 @@ opt['hidden'] = 64
 opt['dropout'] = 0.4
 opt['act'] = 'lrelu'
 opt['wd-fc'] = 5e-4
-opt['wd-conv'] = 1e-2
+opt['wd-conv'] = 1e-1
 opt['lr'] = 1e-2
 opt['dev'] = 0
+opt['final_agg'] = ""
 opt['test'] = ""
 opt['print-epochs'] = 1
 opt['optim'] = 'Adam'
-opt['c'] = 1e-2
+opt['c'] = 1e-1
 
 def generate_command(opt):
     cmd = 'python train.py'

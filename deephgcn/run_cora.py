@@ -9,16 +9,17 @@ opt = dict()
 opt['data'] = 'cora'
 opt['layer'] = 8
 opt['hidden'] = 64
-opt['dropout'] = 0.4
+opt['dropout'] = 0.5
 opt['act'] = 'relu'
 opt['wd-fc'] = 5e-4
-opt['wd-conv'] = 1e-2
+opt['wd-conv'] = 1e-1
 opt['lr'] = 1e-2
 opt['dev'] = 0
 opt['test'] = ""
+opt['final_agg'] = ""
 opt['print-epochs'] = 1
 opt['optim'] = 'Adam'
-opt['c'] = 1e-1
+opt['c'] = 1e-2
 
 def generate_command(opt):
     cmd = 'python train.py'
