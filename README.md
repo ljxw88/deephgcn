@@ -1,6 +1,8 @@
 # DeepHGCN
 This repository contains a PyTorch implementation of "DeepHGCN: Toward Deeper Hyperbolic Graph Convolutional Networks".
 
+Paper: https://ieeexplore.ieee.org/abstract/document/10632071
+
 ### Directories
 - `deephgcn`: code implementation for the proposed DeepHGCN model.
 - `geooptplus`: the augmented geoopt package for implementing key features of HNN++.
